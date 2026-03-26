@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirstPersonController
   Eyes: {fileID: 1232622040}
-  RB: {fileID: 365178203}
+  RB: {fileID: 365178200}
   ProjectilePrefab: {fileID: 0}
   MouseSensitivity: 3
   WalkSpeed: 10
@@ -149,7 +149,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1e8e1bfafe7fa241ba6b4181f3eba85, type: 3}
   m_PrefabInstance: {fileID: 1524568135}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &365178203
+--- !u!54 &365178200
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,14 +176,14 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!136 &365178204
-CapsuleCollider:
+--- !u!64 &365178201
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365178195}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0b3a8205f677730429b3211737acfc6a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -192,13 +192,12 @@ CapsuleCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1.871812
-  m_Direction: 1
-  m_Center: {x: -0, y: 0.94874686, z: 0}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2203174296045351655, guid: f1e8e1bfafe7fa241ba6b4181f3eba85, type: 3}
 --- !u!1001 &803825633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -274,28 +273,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e88b81dbbde6e97419fd1f6bdc41d4ca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 823394742}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e88b81dbbde6e97419fd1f6bdc41d4ca, type: 3}
---- !u!1 &823394739 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e88b81dbbde6e97419fd1f6bdc41d4ca, type: 3}
-  m_PrefabInstance: {fileID: 803825633}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &823394742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823394739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfde15f7c257ffa4d84c607bb4092996, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::zomie
 --- !u!1 &1047078913
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,10 +736,10 @@ PrefabInstance:
       addedObject: {fileID: 365178196}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1e8e1bfafe7fa241ba6b4181f3eba85, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 365178203}
+      addedObject: {fileID: 365178200}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1e8e1bfafe7fa241ba6b4181f3eba85, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 365178204}
+      addedObject: {fileID: 365178201}
   m_SourcePrefab: {fileID: 100100000, guid: f1e8e1bfafe7fa241ba6b4181f3eba85, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
