@@ -10,7 +10,7 @@ public class NPCController : MonoBehaviour
     public Animator Anim;
 
     //My stats
-    public float Speed = 1;
+    public float Speed = 15;
     
     //Who do I walk towards?
     public GameObject Target;
