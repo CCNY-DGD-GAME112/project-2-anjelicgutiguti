@@ -15,7 +15,10 @@ public class FirstPersonController : MonoBehaviour
     public float MouseSensitivity = 3;
     public float WalkSpeed = 10;
     public float JumpPower = 7;
-    
+    public float minAngle = -90f;
+    public float maxAngle = 90f;
+
+    private float currentRotationX = 0f;
     //A list of all the solid objects I'm currently touching
     public List<GameObject> Floors;
 
@@ -35,10 +38,18 @@ public class FirstPersonController : MonoBehaviour
         float xRot = Input.GetAxis("Mouse X") * MouseSensitivity;
         transform.Rotate(0,xRot,0);
         
-        //If my mouse goes up/down my aim (but not body) go up/down
-        float yRot = -Input.GetAxis("Mouse Y") * MouseSensitivity;
-        Eyes.transform.Rotate(yRot,0,0);
+       
+ 
+        // 1. Accumulate input in a separate variable
+        float mouseInputY = Input.GetAxis("Mouse Y") * MouseSensitivity;
+        currentRotationX -= mouseInputY;
 
+        // 2. Clamp the variable
+        currentRotationX = Mathf.Clamp(currentRotationX, minAngle, maxAngle);
+
+        // 3. Apply the clamped value to the rotation
+        Eyes.transform.localRotation = Quaternion.Euler(currentRotationX, 0f, 0f);
+    
         //Movement code
         if (WalkSpeed > 0)
         {
